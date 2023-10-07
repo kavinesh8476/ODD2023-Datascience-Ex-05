@@ -23,3 +23,35 @@ Apply Feature Generation techniques to all the feature of the data set.
 STEP 4
 
 Save the data to the file.
+## PROGRAM
+```
+import pandas as pd
+df=pd.read_csv("Encoding Data.csv")
+df
+
+from sklearn.preprocessing import LabelEncoder ,OrdinalEncoder
+pm=['Hot','Warm','Cold']
+e1=OrdinalEncoder(categories=[pm ])
+e1.fit_transform(df[["ord_2"]])
+df['bo2']=e1.fit_transform(df[["ord_2"]])
+df
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+```
